@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/interactiv/static/css/main.d495281e.chunk.css",
+    "main.js": "/interactiv/static/js/main.56ae8ae3.chunk.js",
+    "main.js.map": "/interactiv/static/js/main.56ae8ae3.chunk.js.map",
+    "runtime-main.js": "/interactiv/static/js/runtime-main.78590dcb.js",
+    "runtime-main.js.map": "/interactiv/static/js/runtime-main.78590dcb.js.map",
+    "static/js/2.3d11257d.chunk.js": "/interactiv/static/js/2.3d11257d.chunk.js",
+    "static/js/2.3d11257d.chunk.js.map": "/interactiv/static/js/2.3d11257d.chunk.js.map",
+    "index.html": "/interactiv/index.html",
+    "static/css/main.d495281e.chunk.css.map": "/interactiv/static/css/main.d495281e.chunk.css.map",
+    "static/js/2.3d11257d.chunk.js.LICENSE.txt": "/interactiv/static/js/2.3d11257d.chunk.js.LICENSE.txt",
+    "static/media/cards.e5950306.svg": "/interactiv/static/media/cards.e5950306.svg",
+    "static/media/styles.module.scss": "/interactiv/static/media/caretDown.1eca8e6e.svg",
+    "static/media/checked.59140a42.svg": "/interactiv/static/media/checked.59140a42.svg",
+    "static/media/closeIcon.437feb1d.svg": "/interactiv/static/media/closeIcon.437feb1d.svg",
+    "static/media/ellipse.afcc34c2.svg": "/interactiv/static/media/ellipse.afcc34c2.svg",
+    "static/media/irr.6602b4ae.svg": "/interactiv/static/media/irr.6602b4ae.svg",
+    "static/media/logo.144d4de7.svg": "/interactiv/static/media/logo.144d4de7.svg",
+    "static/media/mabuta.64d417bd.png": "/interactiv/static/media/mabuta.64d417bd.png",
+    "static/media/mask.2bb360c3.svg": "/interactiv/static/media/mask.2bb360c3.svg",
+    "static/media/note.d8c9c8a7.svg": "/interactiv/static/media/note.d8c9c8a7.svg",
+    "static/media/point.386814a2.svg": "/interactiv/static/media/point.386814a2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.78590dcb.js",
+    "static/js/2.3d11257d.chunk.js",
+    "static/css/main.d495281e.chunk.css",
+    "static/js/main.56ae8ae3.chunk.js"
+  ]
+}
