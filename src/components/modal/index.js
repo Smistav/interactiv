@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import closeIcon from './images/closeIcon.svg'
-// import caretDown from './images/caretDown.svg'
+import { time } from '../../utils/constans'
 import ClassNames from 'classnames'
 
 const Modal = ({ isOpen }) => {
@@ -26,7 +26,11 @@ const Modal = ({ isOpen }) => {
           <p>17 000 ₽</p>
         </div>
         <select className={styles.dropDown}>
-          <option value={3}>3 дня</option>
+          {time.map((item, index) => (
+            <option value={index} key={index}>
+              {item}
+            </option>
+          ))}
         </select>
         <div className={styles.row}>
           <p className={styles.header}>Разработка макета #1</p>

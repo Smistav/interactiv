@@ -3,6 +3,7 @@ import OptionList from './parts/optionList'
 import TimeRent from './parts/timeRent'
 import Done from './parts/done'
 import { useState } from 'react'
+import photo from '../../images/photo.png'
 
 const Order = ({ photoBoth, onClick }) => {
   const [costDone, setCostDone] = useState(photoBoth.cost)
@@ -13,7 +14,9 @@ const Order = ({ photoBoth, onClick }) => {
   return (
     <div className={styles.component}>
       <div className={styles.container}>
-        <div className={styles.galary}></div>
+        <div className={styles.galary}>
+          <img src={photo} />
+        </div>
         <p className={styles.header}>{photoBoth.name}</p>
         <p className={styles.subHeader}>
           Размер: <span>{photoBoth.xyz}</span>

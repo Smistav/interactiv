@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import styles from './styles.module.scss'
 import Radio from './parts/radio'
+import { time } from '../../../../utils/constans'
 
 const TimeRent = () => {
-  const time = ['1 час', '2 часа', '3 часа', '5 часов', 'выставка 2 дня', 'выставка 3 дня']
   const [value, setValue] = useState('1')
   const changeValue = (event) => {
     setValue(event.target.value)
