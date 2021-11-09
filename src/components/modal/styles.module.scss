@@ -1,0 +1,98 @@
+@import '../../utils/var.scss';
+
+.component {
+  display: flex;
+  width: 360px;
+  justify-content: center;
+  background-color: #fff;
+}
+.container {
+  display: flex;
+  width: 328px;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.title {
+  @include defaultPM();
+  @include fontBold(32px, 37px, $textPrimary);
+}
+.button {
+  @include defaultPM();
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+.row {
+  display: flex;
+  width: 288px;
+  justify-content: space-between;
+  align-items: center;
+}
+.rowFirst {
+  margin-top: 26px;
+}
+.rowLast {
+  margin-top: 18px;
+  width: 328px;
+}
+.header {
+  @include defaultPM();
+  padding: 16px 0;
+  @include fontBold(14px, 18px, $textPrimary);
+}
+.headerDown {
+  @include fontBold(23px, 25px, $textPrimary);
+}
+.costDown {
+  @include defaultPM();
+  @include fontMedium(32px, 37px, $textPrimary);
+}
+.headerTop {
+  @include defaultPM();
+}
+.subHeader {
+  @include defaultPM();
+  @include fontMedium(12px, 14px, $textPrimary);
+  span {
+    color: #6a6a6a;
+  }
+}
+.dropDown {
+  width: 79px;
+  @include fontRegular(16px, 24px, $textPrimary);
+  border-radius: 6px;
+  border: 1px solid #d5dae0;
+}
+.select select {
+  background: url('./images/caretDown.svg') no-repeat;
+}
+.hr {
+  height: 1px;
+  background-color: #ebebeb;
+}
+.phone {
+  display: flex;
+  margin-top: 25px;
+  width: 328px;
+  border: 1px solid $textSpan;
+  border-radius: 6px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  @include fontRegular(16px, 24px, $textPrimary);
+}
+.buttonDown {
+  display: flex;
+  width: 328px;
+  margin-top: 10px;
+  background-color: $textSpan;
+  border-radius: 6px;
+  padding: 10px 0;
+  justify-content: center;
+  @include fontBold(18px, 21px, #fff);
+  margin-bottom: 16px;
+}

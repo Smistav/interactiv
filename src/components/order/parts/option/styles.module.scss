@@ -1,0 +1,32 @@
+@import '../../../../utils/var.scss';
+
+.component {
+  display: flex;
+  width: 327px;
+  height: 75px;
+  background-color: $backgroundColor2;
+  border-bottom: 1px solid #ebebeb;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  background-color: aqua;
+  margin: 8px;
+}
+.description {
+  display: flex;
+  width: 250px;
+  height: 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 14px 0;
+}
+.title {
+  @include defaultPM();
+  @include fontBold(14px, 18px, $textPrimary);
+}
+.subTitle {
+  @include defaultPM();
+  @include fontMedium(12px, 18px, $textSpan);
+}

@@ -1,0 +1,57 @@
+@import '../../utils/var.scss';
+
+.component {
+  display: flex;
+  margin-top: 20px;
+  width: 328px;
+  align-self: center;
+}
+.container {
+}
+.title {
+  @include fontBold(40px, 47px, $textPrimary);
+  @include defaultPM();
+  span {
+    color: $textSpan;
+  }
+}
+.description {
+  @include defaultPM();
+  display: block;
+  height: 95px;
+  margin-top: 32px;
+  @include fontRegular(16px, 130%, $textPrimary);
+  u {
+    text-decoration: underline;
+    color: $textSpan;
+  }
+}
+.block {
+  margin-top: 20px;
+  display: flex;
+  width: 328px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+.row {
+  display: flex;
+  column-gap: 16px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 156px;
+  height: 84px;
+  text-align: center;
+}
+.icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+}
+.paragraph {
+  @include defaultPM();
+  @include fontBold(14px, 16px, $textPrimary);
+}

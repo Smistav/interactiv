@@ -1,0 +1,44 @@
+@import '../../../../../../utils/var.scss';
+
+.iconContainer {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  align-self: center;
+  margin-right: 6px;
+}
+.iconContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+.iconCheckbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid $textSpan;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+.iconCheckbox:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.iconContainer input:checked ~ .iconCheckbox:after {
+  display: block;
+}
+.iconContainer .iconCheckbox:after {
+  width: 15px;
+  height: 15px;
+  border: 1px solid $textSpan;
+  border-radius: 2px;
+}

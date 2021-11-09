@@ -1,0 +1,15 @@
+.component {
+  max-width: 375px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  width: 360px;
+  flex-direction: column;
+}
+.logo {
+  width: 63px;
+  height: 60px;
+  margin: 11px 0 0 12px;
+}

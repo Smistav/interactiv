@@ -1,0 +1,20 @@
+@import '../../utils/var.scss';
+
+.component {
+  display: flex;
+  margin-top: 80px;
+  width: 360px;
+  align-self: center;
+  align-items: center;
+  background-color: $backgroundColor1;
+  flex-direction: column;
+}
+.title {
+  display: block;
+  width: 100%;
+  @include defaultPM();
+  padding: 0 0 30px 16px;
+  box-sizing: border-box;
+  @include fontBold(32px, 37px, $textPrimary);
+  background-color: $backgroundColor;
+}

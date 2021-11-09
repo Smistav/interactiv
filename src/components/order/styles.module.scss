@@ -1,0 +1,56 @@
+@import '../../utils/var.scss';
+
+.component {
+  display: flex;
+  width: 360px;
+  align-self: center;
+  align-items: center;
+  background-color: $backgroundColor1;
+  flex-direction: column;
+}
+.title {
+  display: block;
+  width: 100%;
+  @include defaultPM();
+  padding: 0 0 30px 16px;
+  @include fontBold(32px, 37px, $textPrimary);
+  background-color: $backgroundColor;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 328px;
+  background-color: $backgroundColor1;
+}
+.galary {
+  display: flex;
+  align-self: center;
+  margin-top: 16px;
+  width: 296px;
+  height: 238px;
+}
+.header {
+  @include defaultPM();
+  margin-top: 32px;
+  @include fontBold(20px, 23px, $textPrimary);
+}
+
+.subHeader {
+  margin-top: 3px;
+  @include defaultPM();
+  @include fontMedium(12px, 14px, $textPrimary);
+  span {
+    color: #6a6a6a;
+  }
+}
+.titleAddOptions {
+  @include defaultPM();
+  margin-top: 20px;
+
+  width: 80px;
+  height: 22px;
+  @include fontBold(12px, 14px, $textSpan);
+  background-color: $backgroundColor2;
+  border-bottom: 1px solid $textSpan;
+}

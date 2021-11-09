@@ -1,0 +1,35 @@
+@import '../../../../../../utils/var.scss';
+
+.iconContainer {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  align-self: center;
+  background-color: #f1f2f2;
+  border-radius: 6px;
+}
+.iconContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+.iconRadio {
+  height: 26px;
+  border-radius: 6px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  @include fontRegular(12px, 18px, $textPrimary);
+}
+.iconActive {
+  background-color: $textSpan;
+  color: #fff;
+}

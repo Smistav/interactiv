@@ -1,0 +1,19 @@
+@import '../../../../utils/var.scss';
+
+.component {
+  display: flex;
+  margin: 12px 0 18px 0;
+  justify-content: space-between;
+}
+.summ {
+  @include defaultPM();
+  @include fontMedium(32px, 37px, $textPrimary);
+}
+.button {
+  border: none;
+  border-radius: 6px;
+  background-color: $textSpan;
+  @include fontBold(18px, 21px, #fff);
+  padding: 10px;
+  cursor: pointer;
+}

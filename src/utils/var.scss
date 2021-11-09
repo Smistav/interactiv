@@ -1,0 +1,31 @@
+$textPrimary: #131313;
+$textSpan: #ee3d48;
+$backgroundColor: #e5e5e5;
+$backgroundColor1: #fff;
+$backgroundColor2: #fafafa;
+
+@mixin defaultPM {
+  margin: 0;
+  padding: 0;
+}
+@mixin fontRegular($size, $lh, $color) {
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+}
+@mixin fontMedium($size, $lh, $color) {
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+}
+@mixin fontBold($size, $lh, $color) {
+  font-style: normal;
+  font-weight: bold;
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+}

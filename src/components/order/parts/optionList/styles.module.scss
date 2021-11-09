@@ -1,0 +1,10 @@
+@import '../../../../utils/var.scss';
+
+.component {
+  display: flex;
+  width: 328px;
+  height: 152px;
+  background-color: $backgroundColor2;
+  flex-direction: column;
+  overflow-y: scroll;
+}
