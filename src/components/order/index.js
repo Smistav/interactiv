@@ -5,10 +5,13 @@ import Done from './parts/done'
 import { useState } from 'react'
 import photo from '../../images/photo.png'
 
-const Order = ({ photoBoth, onClick }) => {
+const Order = ({ photoBoth, setPhotoBoth, setOption }) => {
   const [costDone, setCostDone] = useState(photoBoth.cost)
   const addOptionCost = (addCost) => {
     setCostDone(addCost)
+  }
+  const handleDone = () => {
+    setPhotoBoth(photoBoth)
   }
 
   return (
@@ -22,9 +25,9 @@ const Order = ({ photoBoth, onClick }) => {
           Размер: <span>{photoBoth.xyz}</span>
         </p>
         <p className={styles.titleAddOptions}>Доп. опции</p>
-        <OptionList cost={photoBoth.cost} addCost={addOptionCost} />
+        <OptionList cost={photoBoth.cost} addCost={addOptionCost} devCheckArray={setOption} />
         <TimeRent />
-        <Done cost={costDone} onClick={onClick} />
+        <Done cost={costDone} onClick={handleDone} />
       </div>
     </div>
   )

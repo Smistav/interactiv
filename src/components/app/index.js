@@ -8,16 +8,22 @@ import Modal from '../modal'
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const handleClick = () => {
+  const [photoBoth, setPhotoBoth] = useState({})
+  const [options, setOptions] = useState([])
+  const handleOpen = (both) => {
     setIsOpen(true)
+    setPhotoBoth(both)
   }
-  const handleOpen = () => {
+  const handleClose = () => {
     setIsOpen(false)
+  }
+  const handleOption = (dev) => {
+    setOptions(dev)
   }
   return (
     <div className={styles.component}>
       {isOpen ? (
-        <Modal isOpen={handleOpen} />
+        <Modal isOpen={handleClose} both={photoBoth} dev={options} />
       ) : (
         <div className={styles.container}>
           <div className={styles.logo}>
@@ -25,7 +31,7 @@ const App = () => {
           </div>
           <Video />
           <Advantages />
-          <OrderList onClick={handleClick} />
+          <OrderList setPhotoBoth={handleOpen} setOption={handleOption} />
         </div>
       )}
     </div>

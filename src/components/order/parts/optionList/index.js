@@ -3,7 +3,7 @@ import Option from '../option'
 import { useState } from 'react'
 import { devLayout } from '../../../../utils/constans'
 
-const OptionList = ({ cost, addCost }) => {
+const OptionList = ({ cost, addCost, devCheckArray }) => {
   const [checkboxArray, setCheckboxArray] = useState(Array(devLayout.length).fill(false))
 
   const handleCheckboxChange = (position) => {
@@ -11,13 +11,16 @@ const OptionList = ({ cost, addCost }) => {
       index === position ? !item : item,
     )
     setCheckboxArray(updateCheckboxArray)
+    const devCheck = []
     const totalOpt = updateCheckboxArray.reduce((sum, item, index) => {
       if (item === true) {
+        devCheck.push(devLayout[index])
         return sum + devLayout[index].cost
       }
       return sum
     }, cost)
     addCost(totalOpt)
+    devCheckArray(devCheck)
   }
 
   return (

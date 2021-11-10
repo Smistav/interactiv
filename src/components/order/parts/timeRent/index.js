@@ -4,7 +4,7 @@ import Radio from './parts/radio'
 import { time } from '../../../../utils/constans'
 
 const TimeRent = () => {
-  const [value, setValue] = useState('1')
+  const [value, setValue] = useState('1 час')
   const changeValue = (event) => {
     setValue(event.target.value)
   }
