@@ -4,7 +4,7 @@ import More from '../orderList/parts/more'
 import { photoBoth } from '../../utils/constans'
 import { useState } from 'react'
 
-const OrderList = ({ setPhotoBoth, setOption }) => {
+const OrderList = () => {
   const [count, setCount] = useState(1)
   const handleMore = () => {
     setCount(count + 1)
@@ -13,7 +13,7 @@ const OrderList = ({ setPhotoBoth, setOption }) => {
     <div className={styles.component}>
       <p className={styles.title}>Фотобудки</p>
       {photoBoth.slice(0, count).map((item, index) => (
-        <Order photoBoth={item} setPhotoBoth={setPhotoBoth} setOption={setOption} key={index} />
+        <Order photoBoth={item} key={index} />
       ))}
       <More more={handleMore} />
     </div>

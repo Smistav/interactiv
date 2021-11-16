@@ -2,16 +2,22 @@ import styles from './styles.module.scss'
 import OptionList from './parts/optionList'
 import TimeRent from './parts/timeRent'
 import Done from './parts/done'
-import { useState } from 'react'
 import photo from '../../images/photo.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { setBoth } from '../../store/slices/bothSlice'
+import { open } from '../../store/slices/modalSlice'
 
-const Order = ({ photoBoth, setPhotoBoth, setOption }) => {
-  const [costDone, setCostDone] = useState(photoBoth.cost)
-  const addOptionCost = (addCost) => {
-    setCostDone(addCost)
-  }
+const Order = ({ photoBoth }) => {
+  const add = useSelector((state) => state.both.add)
+  const dispatch = useDispatch()
+  const totalCost =
+    photoBoth.cost +
+    add.reduce((sum, item) => {
+      return sum + item.cost
+    }, 0)
   const handleDone = () => {
-    setPhotoBoth(photoBoth)
+    dispatch(setBoth(photoBoth))
+    dispatch(open())
   }
 
   return (
@@ -25,9 +31,9 @@ const Order = ({ photoBoth, setPhotoBoth, setOption }) => {
           Размер: <span>{photoBoth.xyz}</span>
         </p>
         <p className={styles.titleAddOptions}>Доп. опции</p>
-        <OptionList cost={photoBoth.cost} addCost={addOptionCost} devCheckArray={setOption} />
+        <OptionList />
         <TimeRent />
-        <Done cost={costDone} onClick={handleDone} />
+        <Done cost={totalCost} onClick={handleDone} />
       </div>
     </div>
   )

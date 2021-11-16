@@ -5,15 +5,23 @@ import ClassNames from 'classnames'
 import vector from '../modal/images/caretDown.svg'
 import InputMask from 'react-input-mask'
 import { useState } from 'react'
+import { close } from '../../store/slices/modalSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearAdd } from '../../store/slices/bothSlice'
 
-const Modal = ({ isOpen, both, dev }) => {
+const Modal = () => {
   const [phone, setPhone] = useState('')
+  const both = useSelector((state) => state.both.both)
+  const add = useSelector((state) => state.both.add)
+
+  const dispatch = useDispatch()
   const closeModal = () => {
-    isOpen()
+    dispatch(close())
+    dispatch(clearAdd())
   }
   const totalCost =
     both.cost +
-    dev.reduce((sum, item) => {
+    add.reduce((sum, item) => {
       return sum + item.cost
     }, 0)
   return (
@@ -41,8 +49,8 @@ const Modal = ({ isOpen, both, dev }) => {
             </option>
           ))}
         </select>
-        {dev.length !== 0 ? (
-          dev.map((item, index) => (
+        {add.length !== 0 ? (
+          add.map((item, index) => (
             <li className={styles.optional} key={index}>
               <div className={styles.row}>
                 <p className={styles.header}>{item.name}</p>
